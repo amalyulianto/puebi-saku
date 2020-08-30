@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:bahasaku_puebi/models/trivia.dart';
 import 'package:bahasaku_puebi/screens/puebi_screen.dart';
+import 'package:bahasaku_puebi/screens/quiz_screen.dart';
 import 'package:bahasaku_puebi/widgets/content_list.dart';
 import 'package:bahasaku_puebi/widgets/my_drawer.dart';
 import 'package:bahasaku_puebi/widgets/trivia_card.dart';
@@ -71,8 +72,7 @@ class HomeScreen extends StatelessWidget {
                         return Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 20.0),
                           child: TriviaCard(
-                            triviaText: _trivia
-                                .data[Random().nextInt(_trivia.data.length)],
+                            triviaText: _trivia.data[index],
                           ),
                         );
                       },
@@ -112,14 +112,15 @@ class HomeScreen extends StatelessWidget {
                     icon: Image.asset('assets/kbbi.png'),
                     title: 'KBBI',
                     onPressed: () {
-                      Fluttertoast.showToast(
-                          msg: "Maaf, KBBI belum tersedia.",
-                          toastLength: Toast.LENGTH_SHORT,
-                          gravity: ToastGravity.BOTTOM,
-                          timeInSecForIosWeb: 1,
-                          backgroundColor: Colors.grey,
-                          textColor: Colors.white,
-                          fontSize: 16.0);
+                      Navigator.pushNamed(context, QuizScreen.id);
+                      // Fluttertoast.showToast(
+                      //     msg: "Maaf, KBBI belum tersedia.",
+                      //     toastLength: Toast.LENGTH_SHORT,
+                      //     gravity: ToastGravity.BOTTOM,
+                      //     timeInSecForIosWeb: 1,
+                      //     backgroundColor: Colors.grey,
+                      //     textColor: Colors.white,
+                      //     fontSize: 16.0);
                     },
                   ),
                   SizedBox(

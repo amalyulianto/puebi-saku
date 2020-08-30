@@ -10,7 +10,7 @@ class TriviaCard extends StatelessWidget {
     return Card(
       child: Container(
         // padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
-        width: 400.0,
+        width: 300.0,
         decoration: BoxDecoration(
           color: Colors.white,
         ),

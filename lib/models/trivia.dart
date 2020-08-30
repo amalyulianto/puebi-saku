@@ -6,5 +6,8 @@ class Trivia {
     'Tidak seperti bahasa-bahasa Eropa, bahasa Indonesia tidak memiliki sistem kata benda bergender.',
   ];
 
-  List<String> get data => _trivia;
+  List<String> get data {
+    _trivia.shuffle();
+    return _trivia;
+  }
 }
