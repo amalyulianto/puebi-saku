@@ -179,89 +179,83 @@ class Huruf {
         judul: 'Huruf Vokal',
         detail: 'Penggunaan huruf abjad',
         materi:
-            '''<p><strong>II.B.1.</strong> Imbuhan (awalan, sisipan, akhiran, serta gabungan awalan dan akhiran) ditulis serangkai dengan bentuk dasarnya.</p>
-
-<p>Misalnya:</p>
+            '''<p>Huruf yang melambangkan vokal dalam bahasa Indonesia terdiri atas lima huruf, yaitu <em>a</em>, <em>e</em>, <em>i</em>, <em>o</em>, dan <em>u</em>.</p>
+<table class="docutils">
+<thead>
+<tr>
+<th>Huruf Vokal</th>
+<th>Posisi Awal</th>
+<th>Posisi Tengah</th>
+<th>Posisi Akhir</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td><em>a</em>pi</td>
+<td>p<em>a</em>di</td>
+<td>lus<em>a</em></td>
+</tr>
+<tr>
+<td>e*</td>
+<td><em>e</em>nak</td>
+<td>p<em>e</em>tak</td>
+<td>sor<em>e</em></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><em>e</em>mber</td>
+<td>p<em>e</em>ndek</td>
+<td>-</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><em>e</em>mas</td>
+<td>k<em>e</em>na</td>
+<td>tip<em>e</em></td>
+</tr>
+<tr>
+<td>i</td>
+<td><em>i</em>tu</td>
+<td>s<em>i</em>mpan</td>
+<td>murn<em>i</em></td>
+</tr>
+<tr>
+<td>o</td>
+<td><em>o</em>leh</td>
+<td>k<em>o</em>ta</td>
+<td>radi<em>o</em></td>
+</tr>
+<tr>
+<td>u</td>
+<td>ulang</td>
+<td>bumi</td>
+<td>ibu</td>
+</tr>
+</tbody>
+</table>
+<p>Keterangan:</p>
+<p>* Untuk pengucapan (pelafalan) kata yang benar, diakritik berikut ini dapat digunakan jika ejaan kata itu dapat menimbulkan keraguan.</p>
+<p>a. Diakritik (é) dilafalkan [e]. Misalnya:</p>
 <ul>
-<li><em>ber</em>jalan</li>
-<li><em>ber</em>kelanjutan</li>
-<li><em>memper</em>mudah</li>
-<li>g<em>em</em>etar</li>
-<li>lukis<em>an</em></li>
-<li><em>ke</em>mau<em>an</em></li>
-<li><em>per</em>baik<em>an</em></li>
+<li>Anak-anak bermain di <em>teras</em> (téras).</li>
+<li>Kedelai merupakan bahan pokok <em>kecap</em> (kécap).</li>
 </ul>
-<p>Catatan:
-Imbuhan yang diserap dari unsur asing, seperti <em>-isme</em>, <em>-man</em>, <em>-wan</em>, atau <em>-wi</em>, ditulis serangkai dengan bentuk dasarnya.</p>
-<p>Misalnya:</p>
+<p>b. Diakritik (è) dilafalkan [ɛ]. Misalnya:</p>
 <ul>
-<li>suku<em>isme</em></li>
-<li>seni<em>man</em></li>
-<li>kamera<em>wan</em></li>
-<li>gereja<em>wi</em></li>
+<li>Kami menonton film <em>seri</em> (sèri).</li>
+<li>Pertahanan <em>militer</em> (militèr) Indonesia cukup kuat.</li>
 </ul>
-<p><strong>II.B.2.</strong> Bentuk terikat ditulis serangkai dengan kata yang mengikutinya.</p>
-<p>Misalnya:</p>
+<p>c. Diakritik (ê) dilafalkan [ə]. Misalnya:</p>
 <ul>
-<li><em>adi</em>busana</li>
-<li><em>aero</em>dinamika</li>
-<li><em>antar</em>kota</li>
-<li><em>anti</em>biotik</li>
-<li><em>awa</em>hama</li>
-<li><em>bi</em>karbonat</li>
-<li><em>bio</em>kimia</li>
-<li><em>deka</em>meter</li>
-<li><em>de</em>moralisasi</li>
-<li><em>dwi</em>warna</li>
-<li><em>eka</em>bahasa</li>
-<li><em>ekstra</em>kurikuler</li>
-<li><em>infra</em>struktur</li>
-<li><em>in</em>konvensional</li>
-<li><em>kontra</em>indikasi</li>
-<li><em>ko</em>sponsor</li>
-<li><em>manca</em>negara</li>
-<li><em>multi</em>lateral</li>
-<li><em>nara</em>pidana</li>
-<li><em>non</em>kolaborasi</li>
-<li><em>pari</em>purna</li>
-<li><em>pasca</em>sarjana</li>
-<li><em>pramu</em>saji</li>
-<li><em>pra</em>sejarah</li>
-<li><em>pro</em>aktif</li>
-<li><em>purna</em>wirawan</li>
-<li><em>sapta</em>krida</li>
-<li><em>semi</em>profesional</li>
-<li><em>sub</em>bagian</li>
-<li><em>swa</em>daya</li>
-<li><em>tele</em>wicara</li>
-<li><em>trans</em>migrasi</li>
-<li><em>tuna</em>karya</li>
-<li><em>tri</em>tunggal</li>
-<li><em>tan</em>suara</li>
-<li><em>ultra</em>modern</li>
+<li>Pertandingan itu berakhir <em>seri</em> (sêri).</li>
+<li>Upacara itu dihadiri pejabat <em>teras</em> (têras) Bank Indonesia.</li>
+<li><em>Kecap</em> (kêcap) dulu makanan itu.</li>
 </ul>
-<p>Catatan:</p>
-<p>(1) Bentuk terikat yang diikuti oleh kata yang berhuruf awal kapital atau singkatan yang berupa huruf kapital dirangkaikan dengan <a href="../../tanda-baca/tanda-hubung">tanda hubung</a> (-).</p>
-<p>Misalnya:</p>
-<ul>
-<li><em>non</em>-Indonesia</li>
-<li><em>pan</em>-Afrikanisme</li>
-<li><em>pro</em>-Barat</li>
-<li><em>non</em>-ASEAN</li>
-<li><em>anti</em>-PKI</li>
-</ul>
-<p>(2) Bentuk <em>maha</em> yang diikuti kata turunan yang mengacu pada nama atau sifat Tuhan ditulis terpisah dengan huruf awal kapital.</p>
-<p>Misalnya:</p>
-<ul>
-<li>Marilah kita bersyukur kepada Tuhan Yang <em>Maha</em> Pengasih.</li>
-<li>Kita berdoa kepada Tuhan Yang <em>Maha</em> Pengampun.</li>
-</ul>
-<p>(3) Bentuk <em>maha</em> yang diikuti kata dasar yang mengacu kepada nama atau sifat Tuhan, kecuali kata <em>esa</em>, ditulis serangkai.</p>
-<p>Misalnya:</p>
-<ul>
-<li>Tuhan Yang <em>Mahakuasa</em> menentukan arah hidup kita.</li>
-<li>Mudah-mudahan Tuhan Yang <em>Maha Esa</em> melindungi kita.</li>
-</ul>'''),
+<div class="admonition note">
+<p class="admonition-title">Catatan</p>
+<p>PUEBI 2015 menambahkan informasi pelafalan diakritik <em>é</em> (taling tertutup), <em>è </em>(taling terbuka), dan <em>ê</em> (pepet). Pedoman ejaan sebelumnya hanya mencantumkan tanda aksen (′).</p>
+</div>'''),
     Puebi(
         judul: 'Huruf Konsonan',
         detail: 'Penggunaan huruf abjad',
