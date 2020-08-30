@@ -37,6 +37,7 @@ class PuebiScreen extends StatelessWidget {
         elevation: 0,
       ),
       drawer: MyDrawer(),
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
@@ -44,26 +45,15 @@ class PuebiScreen extends StatelessWidget {
                 left: 15.0, right: 15.0, bottom: 15.0, top: 10.0),
             child: Column(
               children: [
-                Card(
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                    ),
-                    child: Column(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 20.0, vertical: 15.0),
-                          child: Text(
-                            'Pada tanggal 30 November 2015, Permendiknas 46/2009 tentang Pedoman Umum Ejaan Bahasa Indonesia yang Disempurnakan (EYD) dicabut dan dinyatakan tidak berlaku karena digantikan oleh Permendikbud 50/2015 tentang Pedoman Umum Ejaan Bahasa Indonesia (PUEBI). Naskah PUEBI yang beredar di internet umumnya berbentuk PDF sehingga sulit untuk ditelusuri oleh mesin pencari dan dirujuk dengan tautan spesifik. PUEBI seyogianya tersedia dalam format HTML agar memenuhi kebutuhan tersebut.',
-                            style: TextStyle(
-                              height: 1.5,
-                              fontSize: 16.0,
-                              fontFamily: 'Lato',
-                            ),
-                          ),
-                        ),
-                      ],
+                Padding(
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 20.0, vertical: 15.0),
+                  child: Text(
+                    'Pada tanggal 30 November 2015, Permendiknas 46/2009 tentang Pedoman Umum Ejaan Bahasa Indonesia yang Disempurnakan (EYD) dicabut dan dinyatakan tidak berlaku karena digantikan oleh Permendikbud 50/2015 tentang Pedoman Umum Ejaan Bahasa Indonesia (PUEBI). Naskah PUEBI yang beredar di internet umumnya berbentuk PDF sehingga sulit untuk ditelusuri oleh mesin pencari dan dirujuk dengan tautan spesifik. PUEBI seyogianya tersedia dalam format HTML agar memenuhi kebutuhan tersebut.',
+                    style: TextStyle(
+                      height: 1.5,
+                      fontSize: 16.0,
+                      fontFamily: 'Lato',
                     ),
                   ),
                 ),

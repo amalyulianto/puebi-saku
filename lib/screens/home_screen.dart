@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:bahasaku_puebi/models/trivia.dart';
 import 'package:bahasaku_puebi/screens/puebi_screen.dart';
 import 'package:bahasaku_puebi/widgets/content_list.dart';
@@ -55,20 +57,22 @@ class HomeScreen extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 20.0),
                     child: Text(
-                      'Trivia',
+                      'Trivia Bahasa Indonesia',
                       style: TextStyle(fontSize: 20),
                     ),
                   ),
                   SizedBox(height: 7.5),
                   Container(
-                    height: 150,
+                    height: 125.0,
                     child: ListView.builder(
+                      shrinkWrap: true,
                       itemCount: _trivia.data.length,
                       itemBuilder: (BuildContext context, int index) {
                         return Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 20.0),
                           child: TriviaCard(
-                            triviaText: _trivia.data[index],
+                            triviaText: _trivia
+                                .data[Random().nextInt(_trivia.data.length)],
                           ),
                         );
                       },

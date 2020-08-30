@@ -29,7 +29,7 @@ class InfoScreen extends StatelessWidget {
                         padding: const EdgeInsets.only(
                             right: 20.0, left: 20.0, top: 15.0, bottom: 15.0),
                         child: Text(
-                            '''PUEBI Saku adalah aplikasi yang dikembangkan untuk memperluas wawasan masyarakat tentang tatanan berbahasa Indonesia. Pedoman Umum Ejaan Bahasa Indonesia ini bersumber dari dokumen online yang disebarluaskan oleh Bapak Ivan Lanin melalui Github.''')),
+                            '''PUEBI Saku adalah aplikasi yang dikembangkan untuk memperluas wawasan masyarakat tentang tatanan berbahasa Indonesia. Pedoman Umum Ejaan Bahasa Indonesia ini bersumber dari dokumen online yang disebarluaskan oleh Ivan Lanin melalui Github.''')),
                   ),
                 ),
               ],
