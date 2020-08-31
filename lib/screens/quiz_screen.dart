@@ -45,14 +45,9 @@ class _QuizScreenState extends State<QuizScreen> {
         _quiz.reset();
       } else {
         _quiz.scoreKeeper(score);
-
-        print(_selectedIndex);
-        print(_selectedAnswer);
         _selectedIndex = null;
         _selectedAnswer = null;
-
         _quiz.nextQuestion();
-        print(_quiz.getQuestionNumber + 1 / _quiz.getTotal('quiz1'));
       }
     });
   }
@@ -68,24 +63,22 @@ class _QuizScreenState extends State<QuizScreen> {
             children: [
               Text(
                   'Pertanyaan ${_quiz.getQuestionNumber + 1} dari ${_quiz.getTotal('quiz1')}',
-                  style: TextStyle(fontSize: 30.0, fontFamily: 'Poppins')),
+                  style: TextStyle(fontSize: 25.0, fontFamily: 'Poppins')),
               Padding(
                 padding: EdgeInsets.all(15.0),
                 child: LinearPercentIndicator(
                   width: MediaQuery.of(context).size.width - 75,
-                  animation: true,
+                  animation: false,
                   lineHeight: 5.0,
-                  animationDuration: 500,
                   percent:
                       ((_quiz.getQuestionNumber + 1) / _quiz.getTotal('quiz1')),
-                  center: Text("90.0%"),
                   linearStrokeCap: LinearStrokeCap.roundAll,
                   progressColor: Theme.of(context).primaryColor,
                 ),
               ),
             ],
           ),
-          SizedBox(height: 10.0),
+          SizedBox(height: 5.0),
           Card(
             child: Container(
               color: Colors.white,
@@ -163,71 +156,6 @@ class _QuizScreenState extends State<QuizScreen> {
                                 ),
                               ),
                             ))
-
-                    // Container(
-                    //   height: 150,
-                    //   child: ListView.builder(
-                    //     itemCount: _quiz.getAnswers('quiz1').length,
-                    //     itemBuilder: (context, index) {
-                    //       return GestureDetector(
-                    //         onTap: () {
-                    //           setState(() {
-                    //             _selectedIndex = index;
-
-                    //             print(_selectedIndex);
-                    //           });
-                    //           _selectedAnswer =
-                    //               _quiz.getAnswers('quiz1')[index]['score'];
-                    //           print(_selectedAnswer);
-                    //         },
-                    //         child: Padding(
-                    //           padding: const EdgeInsets.only(top: 10.0),
-                    //           child: Container(
-                    //             width: double.infinity,
-                    //             child: Row(
-                    //               children: [
-                    //                 Container(
-                    //                   child: (_selectedIndex == index
-                    //                           ? !_isChosen
-                    //                           : _isChosen)
-                    //                       ? Icon(
-                    //                           Icons.radio_button_checked,
-                    //                           color: Theme.of(context)
-                    //                               .primaryColor,
-                    //                           size: 25,
-                    //                         )
-                    //                       : Icon(
-                    //                           Icons.radio_button_unchecked,
-                    //                           color: Colors.grey,
-                    //                           size: 25,
-                    //                         ),
-                    //                 ),
-                    //                 SizedBox(width: 20.0),
-                    //                 Expanded(
-                    //                   child: Text(
-                    //                     _quiz.getAnswers('quiz1')[index]
-                    //                         ['text'],
-                    //                     style: TextStyle(
-                    //                         fontFamily: (_selectedIndex == index
-                    //                                 ? !_isChosen
-                    //                                 : _isChosen)
-                    //                             ? 'Sarabun-Bold'
-                    //                             : 'Sarabun',
-                    //                         color: (_selectedIndex == index
-                    //                                 ? !_isChosen
-                    //                                 : _isChosen)
-                    //                             ? Theme.of(context).primaryColor
-                    //                             : Colors.black),
-                    //                   ),
-                    //                 ),
-                    //               ],
-                    //             ),
-                    //           ),
-                    //         ),
-                    //       );
-                    //     },
-                    //   ),
-                    // ),
                   ],
                 ),
               ),
@@ -364,8 +292,8 @@ class _QuizScreenState extends State<QuizScreen> {
         body: SafeArea(
           child: SingleChildScrollView(
             child: Padding(
-                padding: const EdgeInsets.symmetric(
-                    horizontal: 20.0, vertical: 15.0),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20.0, vertical: 5.0),
                 child: _quiz.isFinished('quiz1') ? _showResult() : _showQuiz()),
           ),
         ),
