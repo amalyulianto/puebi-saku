@@ -1,8 +1,6 @@
-import 'dart:math';
-
 import 'package:bahasaku_puebi/models/trivia.dart';
 import 'package:bahasaku_puebi/screens/puebi_screen.dart';
-import 'package:bahasaku_puebi/screens/quiz_screen.dart';
+import 'package:bahasaku_puebi/screens/quiz_start_screen.dart';
 import 'package:bahasaku_puebi/widgets/content_list.dart';
 import 'package:bahasaku_puebi/widgets/my_drawer.dart';
 import 'package:bahasaku_puebi/widgets/trivia_card.dart';
@@ -25,11 +23,11 @@ class HomeScreen extends StatelessWidget {
                 actions: <Widget>[
                   FlatButton(
                     onPressed: () => Navigator.of(context).pop(false),
-                    child: Text('No'),
+                    child: Text('Tidak'),
                   ),
                   FlatButton(
                     onPressed: () => Navigator.of(context).pop(true),
-                    child: Text('Yes'),
+                    child: Text('Ya'),
                   ),
                 ],
               ),
@@ -45,90 +43,105 @@ class HomeScreen extends StatelessWidget {
           elevation: 0,
         ),
         drawer: MyDrawer(),
+        floatingActionButton: FloatingActionButton.extended(
+          onPressed: () {
+            Navigator.pushNamed(context, QuizStartScreen.id);
+          },
+          label: Text('Coba Kuis Bahasa'),
+          backgroundColor: Color(0xFF3F54ED),
+        ),
         body: SafeArea(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(height: 20.0),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                    child: Text(
-                      'Trivia Bahasa Indonesia',
-                      style: TextStyle(fontSize: 20),
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(height: 20.0),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                      child: Text(
+                        'Trivia Bahasa Indonesia',
+                        style: TextStyle(fontSize: 20),
+                      ),
                     ),
-                  ),
-                  SizedBox(height: 7.5),
-                  Container(
-                    height: 125.0,
-                    child: ListView.builder(
-                      shrinkWrap: true,
-                      itemCount: _trivia.data.length,
-                      itemBuilder: (BuildContext context, int index) {
-                        return Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                          child: TriviaCard(
-                            triviaText: _trivia.data[index],
-                          ),
-                        );
-                      },
-                      scrollDirection: Axis.horizontal,
+                    SizedBox(height: 7.5),
+                    Container(
+                      height: 125.0,
+                      child: ListView.builder(
+                        shrinkWrap: true,
+                        itemCount: _trivia.data.length,
+                        itemBuilder: (BuildContext context, int index) {
+                          return Padding(
+                            padding: const EdgeInsets.only(left: 20.0),
+                            child: TriviaCard(
+                              triviaText: _trivia.data[index],
+                            ),
+                          );
+                        },
+                        scrollDirection: Axis.horizontal,
+                      ),
                     ),
-                  ),
-                  SizedBox(height: 12.0),
-                ],
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                child: Text(
-                  'Belajar',
-                  style: TextStyle(fontSize: 20),
+                    SizedBox(height: 12.0),
+                  ],
                 ),
-              ),
-              SizedBox(height: 7.5),
-              Container(
-                height: 300.0,
-                child: ListView(scrollDirection: Axis.horizontal, children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20.0),
-                    child: ContentList(
-                      detail: 'Panduan Umum Ejaan Bahasa Indonesia',
-                      title: 'PUEBI',
-                      icon: Image.asset('assets/puebi.png'),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Belajar',
+                        style: TextStyle(fontSize: 20),
+                      ),
+                      SizedBox(width: 30.0),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 7.5),
+                Container(
+                  height: 300.0,
+                  child: ListView(scrollDirection: Axis.horizontal, children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 20.0),
+                      child: ContentList(
+                        detail: 'Panduan Umum Ejaan Bahasa Indonesia',
+                        title: 'PUEBI',
+                        icon: Image.asset('assets/puebi.png'),
+                        onPressed: () {
+                          Navigator.pushNamed(context, PuebiScreen.id);
+                        },
+                      ),
+                    ),
+                    SizedBox(
+                      width: 20.0,
+                    ),
+                    ContentList(
+                      detail: 'Kamus Besar Bahasa Indonesia',
+                      icon: Image.asset('assets/kbbi.png'),
+                      title: 'KBBI',
                       onPressed: () {
-                        Navigator.pushNamed(context, PuebiScreen.id);
+                        Fluttertoast.showToast(
+                            msg: "Maaf, KBBI belum tersedia.",
+                            toastLength: Toast.LENGTH_SHORT,
+                            gravity: ToastGravity.BOTTOM,
+                            timeInSecForIosWeb: 1,
+                            backgroundColor: Colors.grey,
+                            textColor: Colors.white,
+                            fontSize: 16.0);
                       },
                     ),
-                  ),
-                  SizedBox(
-                    width: 20.0,
-                  ),
-                  ContentList(
-                    detail: 'Kamus Besar Bahasa Indonesia',
-                    icon: Image.asset('assets/kbbi.png'),
-                    title: 'KBBI',
-                    onPressed: () {
-                      Navigator.pushNamed(context, QuizScreen.id);
-                      // Fluttertoast.showToast(
-                      //     msg: "Maaf, KBBI belum tersedia.",
-                      //     toastLength: Toast.LENGTH_SHORT,
-                      //     gravity: ToastGravity.BOTTOM,
-                      //     timeInSecForIosWeb: 1,
-                      //     backgroundColor: Colors.grey,
-                      //     textColor: Colors.white,
-                      //     fontSize: 16.0);
-                    },
-                  ),
-                  SizedBox(
-                    width: 20.0,
-                  ),
-                ]),
-              ),
-            ],
+                    SizedBox(
+                      width: 20.0,
+                    ),
+                  ]),
+                ),
+                SizedBox(height: 20.0),
+              ],
+            ),
           ),
         ),
       ),

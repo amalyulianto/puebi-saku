@@ -3,6 +3,7 @@ import 'package:bahasaku_puebi/screens/info_screen.dart';
 import 'package:bahasaku_puebi/screens/list_materi_screen.dart';
 import 'package:bahasaku_puebi/screens/materi_screen.dart';
 import 'package:bahasaku_puebi/screens/puebi_screen.dart';
+import 'package:bahasaku_puebi/screens/quiz_start_screen.dart';
 import 'package:bahasaku_puebi/screens/quiz_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: 'Sarabun',
         primaryColor: Color(0xff2083FA),
@@ -31,6 +33,7 @@ class MyApp extends StatelessWidget {
         PuebiScreen.id: (context) => PuebiScreen(),
         InfoScreen.id: (context) => InfoScreen(),
         QuizScreen.id: (context) => QuizScreen(),
+        QuizStartScreen.id: (context) => QuizStartScreen(),
       },
     );
   }
