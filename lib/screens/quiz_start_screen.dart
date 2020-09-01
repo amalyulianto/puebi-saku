@@ -1,5 +1,5 @@
 import 'package:bahasaku_puebi/screens/quiz_screen.dart';
-import 'package:bahasaku_puebi/widgets/my_drawer.dart';
+import 'package:bahasaku_puebi/widgets/new_drawer.dart';
 import 'package:bahasaku_puebi/widgets/new_button.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +17,7 @@ class QuizStartScreen extends StatelessWidget {
         elevation: 0,
       ),
       backgroundColor: Colors.white,
-      drawer: MyDrawer(),
+      drawer: NewDrawer(),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 15.0),

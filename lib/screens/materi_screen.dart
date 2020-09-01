@@ -1,6 +1,6 @@
 import 'package:bahasaku_puebi/models/pass.dart';
 import 'package:bahasaku_puebi/screens/list_materi_screen.dart';
-import 'package:bahasaku_puebi/widgets/my_drawer.dart';
+import 'package:bahasaku_puebi/widgets/new_drawer.dart';
 import 'package:bahasaku_puebi/widgets/navigation_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
@@ -34,7 +34,7 @@ class MateriScreen extends StatelessWidget {
           ),
           elevation: 0,
         ),
-        drawer: MyDrawer(),
+        drawer: NewDrawer(),
         backgroundColor: Colors.white,
         body: SafeArea(
           child: SingleChildScrollView(

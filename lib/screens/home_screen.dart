@@ -2,7 +2,7 @@ import 'package:bahasaku_puebi/models/trivia.dart';
 import 'package:bahasaku_puebi/screens/puebi_screen.dart';
 import 'package:bahasaku_puebi/screens/quiz_start_screen.dart';
 import 'package:bahasaku_puebi/widgets/content_list.dart';
-import 'package:bahasaku_puebi/widgets/my_drawer.dart';
+import 'package:bahasaku_puebi/widgets/new_drawer.dart';
 import 'package:bahasaku_puebi/widgets/trivia_card.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -42,7 +42,7 @@ class HomeScreen extends StatelessWidget {
           ),
           elevation: 0,
         ),
-        drawer: MyDrawer(),
+        drawer: NewDrawer(),
         floatingActionButton: FloatingActionButton.extended(
           onPressed: () {
             Navigator.pushNamed(context, QuizStartScreen.id);

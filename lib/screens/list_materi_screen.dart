@@ -1,6 +1,6 @@
 import 'package:bahasaku_puebi/models/pass.dart';
 import 'package:bahasaku_puebi/screens/materi_screen.dart';
-import 'package:bahasaku_puebi/widgets/my_drawer.dart';
+import 'package:bahasaku_puebi/widgets/new_drawer.dart';
 import 'package:flutter/material.dart';
 
 class ListMateriScreen extends StatelessWidget {
@@ -18,7 +18,7 @@ class ListMateriScreen extends StatelessWidget {
         elevation: 0,
       ),
       backgroundColor: Colors.white,
-      drawer: MyDrawer(),
+      drawer: NewDrawer(),
       body: SafeArea(
         child: Column(
           children: [

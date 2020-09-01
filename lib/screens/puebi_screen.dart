@@ -5,7 +5,7 @@ import 'package:bahasaku_puebi/models/tanda_baca_data.dart';
 import 'package:bahasaku_puebi/models/unsur_serapan_data.dart';
 import 'package:bahasaku_puebi/screens/list_materi_screen.dart';
 import 'package:bahasaku_puebi/widgets/course_card.dart';
-import 'package:bahasaku_puebi/widgets/my_drawer.dart';
+import 'package:bahasaku_puebi/widgets/new_drawer.dart';
 import 'package:flutter/material.dart';
 
 class PuebiScreen extends StatelessWidget {
@@ -36,7 +36,7 @@ class PuebiScreen extends StatelessWidget {
         ),
         elevation: 0,
       ),
-      drawer: MyDrawer(),
+      drawer: NewDrawer(),
       backgroundColor: Colors.white,
       body: SafeArea(
         child: SingleChildScrollView(

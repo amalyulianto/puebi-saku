@@ -1,4 +1,4 @@
-import 'package:bahasaku_puebi/widgets/my_drawer.dart';
+import 'package:bahasaku_puebi/widgets/new_drawer.dart';
 import 'package:flutter/material.dart';
 
 class InfoScreen extends StatelessWidget {
@@ -13,7 +13,7 @@ class InfoScreen extends StatelessWidget {
         ),
         elevation: 0,
       ),
-      drawer: MyDrawer(),
+      drawer: NewDrawer(),
       body: SafeArea(
           child: Column(
         children: [
