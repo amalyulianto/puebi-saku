@@ -17,7 +17,8 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   void navigationPage() {
-    Navigator.of(context).pushReplacementNamed(HomeScreen.id);
+    Navigator.of(context).pushNamedAndRemoveUntil(
+        HomeScreen.id, (Route<dynamic> route) => false);
   }
 
   @override
