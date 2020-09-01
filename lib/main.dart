@@ -5,6 +5,7 @@ import 'package:bahasaku_puebi/screens/materi_screen.dart';
 import 'package:bahasaku_puebi/screens/puebi_screen.dart';
 import 'package:bahasaku_puebi/screens/quiz_start_screen.dart';
 import 'package:bahasaku_puebi/screens/quiz_screen.dart';
+import 'package:bahasaku_puebi/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -25,8 +26,9 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Sarabun',
         primaryColor: Color(0xff2083FA),
       ),
-      initialRoute: HomeScreen.id,
+      initialRoute: SplashScreen.id,
       routes: {
+        SplashScreen.id: (context) => SplashScreen(),
         HomeScreen.id: (context) => HomeScreen(),
         ListMateriScreen.id: (context) => ListMateriScreen(),
         MateriScreen.id: (context) => MateriScreen(),

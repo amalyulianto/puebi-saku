@@ -27,8 +27,7 @@ class ContentList extends StatelessWidget {
                   child: Text(detail,
                       maxLines: 2,
                       textAlign: TextAlign.center,
-                      style:
-                          TextStyle(color: Colors.grey[700], fontSize: 16.0)),
+                      style: TextStyle(color: Colors.black, fontSize: 16.0)),
                 ),
               ),
               Align(

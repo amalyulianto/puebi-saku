@@ -66,14 +66,17 @@ class _QuizScreenState extends State<QuizScreen> {
                   style: TextStyle(fontSize: 25.0, fontFamily: 'Poppins')),
               Padding(
                 padding: EdgeInsets.all(15.0),
-                child: LinearPercentIndicator(
+                child: Container(
                   width: MediaQuery.of(context).size.width - 75,
-                  animation: false,
-                  lineHeight: 5.0,
-                  percent:
-                      ((_quiz.getQuestionNumber + 1) / _quiz.getTotal('quiz1')),
-                  linearStrokeCap: LinearStrokeCap.roundAll,
-                  progressColor: Theme.of(context).primaryColor,
+                  child: LinearPercentIndicator(
+                    // width: MediaQuery.of(context).size.width - 75,
+                    animation: false,
+                    lineHeight: 5.0,
+                    percent: ((_quiz.getQuestionNumber + 1) /
+                        _quiz.getTotal('quiz1')),
+                    linearStrokeCap: LinearStrokeCap.roundAll,
+                    progressColor: Theme.of(context).primaryColor,
+                  ),
                 ),
               ),
             ],
